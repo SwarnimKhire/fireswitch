@@ -3,14 +3,14 @@ import 'package:friday/utils/colors.dart';
 import 'package:friday/utils/textstyles.dart';
 
 class Product extends StatelessWidget {
-  Product(
+  const Product(
       {super.key,
       required this.img,
       required this.subtitle,
       required this.title});
-  String img;
-  String title;
-  String subtitle;
+  final String img;
+  final String title;
+  final String subtitle;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -29,7 +29,7 @@ class Product extends StatelessWidget {
           ),
           Text(
             subtitle,
-            style: ftextStyle(12,whiteColor , FontWeight.w400 ),
+            style: ftextStyle(12, whiteColor, FontWeight.w400),
           ),
         ],
       ),

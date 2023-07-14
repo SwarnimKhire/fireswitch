@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:friday/utils/colors.dart';
 import 'package:friday/utils/textstyles.dart';
 
 class Slide extends StatelessWidget {
-  Slide(
+  const Slide(
       {super.key,
       required this.imgUrl,
       required this.onchanged,
       required this.title,
-      required this.value
-      });
-  String title;
-  String imgUrl;
-  double value;
-  void Function(double)? onchanged;
+      required this.value});
+  final String title;
+  final String imgUrl;
+  final double value;
+  final void Function(double)? onchanged;
   @override
   Widget build(BuildContext context) {
     return Row(

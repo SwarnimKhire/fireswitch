@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:friday/utils/colors.dart';
-import 'package:friday/utils/textstyles.dart';
 import 'package:friday/widgets/slide.dart';
 
 class DetailSlider extends StatefulWidget {
