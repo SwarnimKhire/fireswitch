@@ -7,10 +7,11 @@ class Product extends StatelessWidget {
       {super.key,
       required this.img,
       required this.subtitle,
-      required this.title});
+      required this.title, required this.color});
   final String img;
   final String title;
   final String subtitle;
+  final Color color;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -29,7 +30,7 @@ class Product extends StatelessWidget {
           ),
           Text(
             subtitle,
-            style: ftextStyle(12, whiteColor, FontWeight.w400),
+            style: ftextStyle(12, color, FontWeight.w500),
           ),
         ],
       ),

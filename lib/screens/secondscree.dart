@@ -14,23 +14,30 @@ class Second extends StatefulWidget {
 }
 
 class _SecondState extends State<Second> {
-  int? selectedIndex;
+  int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: mainColor,
-     
       body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal:18.0),
-              child: Row(children: [
-                Text('Search', style: ftextStyle(32, whiteColor, FontWeight.w600),),
-                Spacer(),
-                Text('wknvljv78knj44', style: ftextStyle(14, whiteColor, FontWeight.w500),),
-              ],),
+              padding: const EdgeInsets.symmetric(horizontal: 18.0),
+              child: Row(
+                children: [
+                  Text(
+                    'Search',
+                    style: ftextStyle(32, whiteColor, FontWeight.w600),
+                  ),
+                  const Spacer(),
+                  Text(
+                    'wknvljv78knj44',
+                    style: ftextStyle(14, whiteColor, FontWeight.w500),
+                  ),
+                ],
+              ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 18.0),
@@ -40,7 +47,7 @@ class _SecondState extends State<Second> {
               ),
             ),
             const SizedBox(height: 30),
-            Center(
+            const Center(
               child: Wrap(
                 alignment: WrapAlignment.center,
                 direction: Axis.horizontal,
@@ -48,21 +55,29 @@ class _SecondState extends State<Second> {
                 runSpacing: 12,
                 children: [
                   Product(
-                      img: 'Bork',
-                      subtitle: 'Vaccum Cleaner',
-                      title: 'Bork V350'),
+                    img: 'Bork',
+                    subtitle: 'Vaccum Cleaner',
+                    title: 'Bork V350',
+                    color: whiteColor,
+                  ),
                   Product(
-                      img: 'torch',
-                      subtitle: 'Smart Bulb',
-                      title: 'LIFX LED Light'),
+                    img: 'torch',
+                    subtitle: 'Smart Bulb',
+                    title: 'LIFX LED Light',
+                    color: whiteColor,
+                  ),
                   Product(
-                      img: 'xiomi',
-                      subtitle: 'Humidifier',
-                      title: 'Xiaomi DEM-F600'),
+                    img: 'xiomi',
+                    subtitle: 'Humidifier',
+                    title: 'Xiaomi DEM-F600',
+                    color: whiteColor,
+                  ),
                   Product(
-                      img: 'Bork',
-                      subtitle: 'Select manually',
-                      title: 'Not found device?'),
+                    img: 'Wifi',
+                    subtitle: 'Select manually',
+                    title: 'Not found device?',
+                    color: yellowColor,
+                  ),
                 ],
               ),
             ),
@@ -87,10 +102,11 @@ class _SecondState extends State<Second> {
             ),
           ]),
       bottomNavigationBar: bnB(
-        selectedIndex: selectedIndex ?? 0,
+        selectedIndex: selectedIndex,
         ontap: (index) {
           switch (index) {
             case 0:
+            
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const HomePage()));
               break;
@@ -101,6 +117,7 @@ class _SecondState extends State<Second> {
           }
           setState(() {
             selectedIndex = index;
+          
           });
         },
       ),
