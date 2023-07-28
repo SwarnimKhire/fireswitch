@@ -47,28 +47,34 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             Stack(
-              children:[ Image.asset('assets/images/1.png'),
-              Positioned(
-                top: 370,
-                left: 20,
-                right: 20,
-                child:  Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    DetailCard(title: '36%', imgurl: 'humidity', subtitle: 'Humidifier\nAir',),
-                    SizedBox(width: 12),
-                    DetailCard(title: '76%', imgurl: 'clean', subtitle: 'Purifier\nAir',),
-                  ],
+              children: [
+                Image.asset('assets/images/1.png'),
+                const Positioned(
+                  top: 370,
+                  left: 20,
+                  right: 20,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      DetailCard(
+                        title: '36%',
+                        imgurl: 'humidity',
+                        subtitle: 'Humidifier\nAir',
+                      ),
+                      SizedBox(width: 12),
+                      DetailCard(
+                        title: '76%',
+                        imgurl: 'clean',
+                        subtitle: 'Purifier\nAir',
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              const SizedBox(height: 12),
-              Positioned(
-                top: 590,
-                left: 20,
-                right: 20,
-                child: DetailSlider()),
-              
-            ],),
+                const SizedBox(height: 12),
+                const Positioned(
+                    top: 590, left: 20, right: 20, child: DetailSlider()),
+              ],
+            ),
           ],
         ),
       ),
